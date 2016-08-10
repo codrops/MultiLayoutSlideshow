@@ -2,6 +2,8 @@
 
 A simple decorative slideshow component with individual slide layouts and effects. 
 
+![Multi-Layout Slideshow](http://tympanus.net/codrops/wp-content/uploads/2016/07/MultiLayoutSlideshow_800x600.jpg)
+
 [Article on Codrops](http://tympanus.net/codrops/?p=27363)
 
 [Demo](http://tympanus.net/Development/MultiLayoutSlideshow/)
