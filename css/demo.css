@@ -1,0 +1,308 @@
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+	color: #5f6669;
+	background: #1e2021;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #ffeb3b;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #fff;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+
+/* Icons */
+
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+}
+
+
+/* Buttons */
+
+.btn {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	pointer-events: auto;
+	color: #ffeb3b;
+	border: none;
+	background: none;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn:hover {
+	color: #fff;
+}
+
+.btn--arrow {
+	font-size: 1.5em;
+	display: block;
+}
+
+.btn--arrow:nth-child(2) {
+	margin: 0 0 0 0.5em;
+}
+
+.btn--arrow .icon {
+	height: 0.5em;
+}
+
+.btn--github {
+	font-size: 1.25em;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	margin: 0 1.5em 1.25em 0;
+	color: #fff;
+}
+
+.btn--github:hover,
+.btn--github:focus {
+	color: #ffeb3b;
+}
+
+
+/* Codrops header */
+
+.codrops-header {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%;
+	padding: 0.8em 0.75em;
+}
+
+.codrops-header__title {
+	font-size: 1em;
+	font-weight: 500;
+	margin: 0;
+	padding: 0 0.75em;
+}
+
+.codrops-header__tagline {
+	font-size: 0.85em;
+	margin: 0 6em 0 auto;
+	padding: 0 1em;
+	color: #ffeb3b;
+}
+
+
+/* Top Navigation Style */
+
+.codrops-links {
+	position: relative;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.codrops-links::after {
+	content: '';
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	width: 1px;
+	height: 80%;
+	opacity: 0.2;
+	background: currentColor;
+	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
+	transform: rotate3d(0, 0, 1, 22.5deg);
+}
+
+.codrops-icon {
+	display: inline-block;
+	margin: 0.25em;
+	padding: 0.25em;
+}
+
+.ie-message {
+	font-weight: bold;
+	display: none;
+	margin: 1em;
+	padding: 0.5em 1em;
+	color: #fff;
+	background: #d861a3;
+}
+
+
+/* Demo links */
+
+.dummy-links {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100vh;
+	padding: 1.8em 2.25em;
+	-webkit-transform: rotate3d(0, 0, 1, 90deg);
+	transform: rotate3d(0, 0, 1, 90deg);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.dummy-links__link {
+	display: inline-block;
+	margin: 0 1.5em 0 0;
+	color: #fff;
+}
+
+.dummy-links__link:hover,
+.dummy-links__link:focus {
+	color: #ffeb3b;
+}
+
+.dummy-links__link--current,
+.dummy-links__link--current:hover {
+	color: #5f6669;
+}
+
+
+/* Slideshow nav (not part of plugin so we put the styles here) */
+
+.slideshow__nav {
+	position: absolute;
+	pointer-events: none;
+}
+
+.no-js .slideshow__nav {
+	display: none;
+}
+
+.slideshow__nav--arrows {
+	font-size: 4em;
+	right: 1.1em;
+	bottom: 1.45em;
+}
+
+
+/* Content*/
+
+.content {
+	padding: 0 2em 8em;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.content p {
+	margin: 0 0 1em;
+}
+
+.content--text p {
+	font-size: 1.25em;
+	line-height: 1.5;
+	max-width: 600px;
+}
+
+
+/* Related demos */
+
+.content--related {
+	font-size: 0.85em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.media-item {
+	display: inline-block;
+	padding: 1em;
+	vertical-align: top;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.media-item__img {
+	max-width: 100%;
+	opacity: 0.3;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.media-item:hover .media-item__img,
+.media-item:focus .media-item__img {
+	opacity: 1;
+}
+
+.media-item__title {
+	font-size: 1em;
+	margin: 0;
+	padding: 0.5em;
+}
+
+@media screen and (max-width: 45em) {
+	.codrops-header__title {
+		font-size: 0.8em;
+	}
+	.codrops-header__tagline {
+		display: none;
+	}
+	.dummy-links {
+		font-size: 0.75em;
+		position: relative;
+		left: 0;
+		width: auto;
+		padding: 0.5em 1em 0;
+		-webkit-transform: none;
+		transform: none;
+	}
+	.content {
+		font-size: 0.85em;
+	}
+	.slideshow__nav--arrows {
+		font-size: 2em;
+		right: auto;
+		bottom: 1em;
+		left: 0.5em;
+	}
+	.btn--github {
+		margin: 0 0.25em 0.75em 0;
+	}
+
+}
